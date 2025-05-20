@@ -1,0 +1,64 @@
+.nav-link {
+  font-size: 1.1rem; /* Slightly larger for readability */
+  padding: 0.5rem 1rem; /* Comfortable spacing */
+}
+
+.nav-link:hover {
+  text-decoration: none; /* Remove underline for cleaner look */
+  color: #71c4ff; /* Match gradient color */
+}
+
+.navbar {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 1001;
+}
+
+a.navbar-brand:hover {
+  color: rgb(40, 120, 241);
+}
+
+.navbar-collapse {
+  border-top: none;
+}
+
+.navbar-collapse.show {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+  height: 3em;
+  padding: 0.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+:where(.logo, .nav-link):hover {
+  filter: drop-shadow(0 0 2em #068be483);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .react {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar-collapse {
+    border-top: none !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .logo {
+    display: none;
+  }
+}
