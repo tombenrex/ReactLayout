@@ -22,7 +22,7 @@ export default function Sidebar({ isOpen, onClose }) {
               navigate('/tasktwo');
             }}
           >
-            Task 2
+            Tic Tac Game
           </button>
         </li>
         <li className='nav-item'>

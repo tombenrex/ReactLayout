@@ -12,7 +12,7 @@ export default function Navbar({ onSidebarOpen, isSidebarOpen }) {
   };
 
   return (
-    <nav className='navbar navbar-expand-lg navbar-dark bg-dark fixed-top'>
+    <nav className='navbar navbar-expand-lg navbar-dark bg-dark fixed-top align-self'>
       <div className='d-flex align-items-center gap-2'>
         <button className='btn btn-dark btn-lg' onClick={handleSidebarToggle}>
           <i className='bi bi-list'></i>
@@ -20,8 +20,8 @@ export default function Navbar({ onSidebarOpen, isSidebarOpen }) {
         <img src={reactLogo} className='logo react' alt='React logo' />
       </div>
 
-      <Link className='navbar-brand text-center mx-auto' to='/'>
-        F25 Borås YH - React Kurs
+      <Link className='text-center mx-auto' to='/'>
+        <h1 className='fw-bold text-light m-0'>F25 Borås YH - React Kurs</h1>
       </Link>
 
       <div className='d-flex align-items-center gap-2'>

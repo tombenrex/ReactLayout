@@ -14,7 +14,7 @@ function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   return (
-    <Router basename='/ReactLayout'>
+    <Router basename='/ReactLayout/'>
       <Navbar
         onSidebarOpen={() => setIsSidebarOpen((prev) => !prev)}
         isSidebarOpen={isSidebarOpen}

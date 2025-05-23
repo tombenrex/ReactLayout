@@ -18,11 +18,13 @@ function Board({ xIsNext, squares, onPlay, isComputerTurn }) {
   }
 
   const winner = calculateWinner(squares);
-  const status = winner
-    ? 'Winner: ' + winner
-    : xIsNext
-    ? 'Your turn (X)'
-    : 'Computer is making a move...';
+  const status = winner ? (
+    'Winner: ' + winner
+  ) : xIsNext ? (
+    'Your turn (X)'
+  ) : (
+    <span className='computer-turn'>Computer is making a move...</span>
+  );
 
   return (
     <>

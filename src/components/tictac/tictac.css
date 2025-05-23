@@ -8,10 +8,15 @@
   text-align: center;
 }
 
-h3 {
+.game h3 {
   margin-bottom: 15px;
   font-weight: 600;
   letter-spacing: 1px;
+  color: #fff;
+}
+
+.status {
+  color: #50fa7b;
 }
 
 .game-board {
@@ -56,6 +61,10 @@ h3 {
   font-weight: 600;
 }
 
+.computer-turn {
+  color: #d40d0d;
+}
+
 .status.winner {
   color: #ff79c6;
   font-size: 1.4rem;
@@ -79,7 +88,6 @@ h3 {
   color: #282a36;
 }
 
-/* Responsiv: mindre squares på mobiler */
 @media (max-width: 400px) {
   .square {
     width: 70px;
