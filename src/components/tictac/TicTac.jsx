@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
-import './tictac.css';
+import './TicTac.css';
 
 function Square({ value, onSquareClick }) {
   return (

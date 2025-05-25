@@ -2,36 +2,13 @@
 
 * {
   margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
 body {
   font-family: 'Poppins', sans-serif;
-  background-size: 100% 100%;
-  background-position: 0px 0px;
-  background-image: linear-gradient(90deg, #a100ffff 0%, #71c4ffff 100%);
+  background: linear-gradient(to right, #6b21a8, #3b82f6);
   color: #000;
   line-height: 1.5;
-  padding-top: 70px;
-}
-
-.card {
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 10px;
-  padding: 2rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 800px;
-  width: 100%;
-  z-index: 1;
-}
-
-.card h1 {
-  font-size: clamp(1.5rem, 2vw + 1rem, 2.5rem);
-  margin-bottom: 2rem;
-}
-
-.card p {
-  font-size: 1.1rem;
-  line-height: 1.8;
+  padding-top: 40px;
 }
