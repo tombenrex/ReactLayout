@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import Tags from './Tags';
-import './tagtoggle.css';
 
 export default function TagToggle() {
   const [showTags, setShowTags] = useState(false);

@@ -20,7 +20,7 @@ function App() {
         isSidebarOpen={isSidebarOpen}
       />
       <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
-      <div className='container mt-4'>
+      <div className='max-w-7xl mx-auto mt-20 px-4 sm:px-6 lg:px-8'>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />

@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import { Bars3Icon, ChevronDownIcon } from '@heroicons/react/24/outline';
 import reactLogo from '../../assets/react.svg';
 import viteLogo from '../../assets/vite.svg';
-import './navbar.css';
+/* import './navbar.css'; */
 
 export default function Navbar({ onSidebarOpen, isSidebarOpen }) {
   const [isCollapsed, setIsCollapsed] = useState(true);
@@ -12,64 +13,65 @@ export default function Navbar({ onSidebarOpen, isSidebarOpen }) {
   };
 
   return (
-    <nav className='navbar navbar-expand-lg navbar-dark bg-dark fixed-top align-self'>
-      <div className='d-flex align-items-center gap-2'>
-        <button className='btn btn-dark btn-lg' onClick={handleSidebarToggle}>
-          <i className='bi bi-list'></i>
+    <nav className='fixed top-0 w-full bg-gray-900 text-white flex items-center justify-between px-4 py-2 z-50'>
+      <div className='flex items-center space-x-2'>
+        <button
+          className='p-2 bg-gray-800 text-white rounded-lg lg:hidden'
+          onClick={handleSidebarToggle}
+        >
+          <Bars3Icon className='h-6 w-6 text-white' />
         </button>
-        <img src={reactLogo} className='logo react' alt='React logo' />
+        <img src={reactLogo} className='h-8' alt='React logo' />
       </div>
 
       <Link className='text-center mx-auto' to='/'>
-        <h1 className='fw-bold text-light m-0'>F25 Borås YH - React Kurs</h1>
+        <h1 className='font-bold text-xl m-0'>F25 Borås YH - React Kurs</h1>
       </Link>
 
-      <div className='d-flex align-items-center gap-2'>
-        <img src={viteLogo} className='logo' alt='Vite logo' />
+      <div className='flex items-center space-x-2'>
+        <img src={viteLogo} className='h-8' alt='Vite logo' />
         <button
-          className='btn btn-dark btn-lg d-lg-none'
+          className='p-2 bg-gray-800 text-white rounded-lg lg:hidden'
           type='button'
           onClick={() => setIsCollapsed(!isCollapsed)}
           aria-controls='navbarNav'
           aria-expanded={!isCollapsed}
           aria-label='Toggle navigation'
         >
-          <i
-            className={`bi ${
-              isCollapsed ? 'bi-chevron-down' : 'bi-chevron-up'
-            }`}
-          ></i>
+          <ChevronDownIcon
+            className={`h-6 w-6 text-white ${isCollapsed ? '' : 'rotate-180'}`}
+          />
         </button>
       </div>
 
       <div
-        className={`navbar-collapse ${
-          isCollapsed ? 'collapse' : 'show'
-        } bg-dark px-3`}
+        className={`w-full lg:flex lg:items-center lg:w-auto ${
+          isCollapsed ? 'hidden' : 'block'
+        } bg-gray-900 px-3 py-2 lg:bg-transparent`}
         id='navbarNav'
       >
-        <ul className='navbar-nav ms-auto'>
-          <li className='nav-item'>
+        <ul className='flex flex-col lg:flex-row lg:space-x-4 lg:ml-auto'>
+          <li>
             <Link
-              className='nav-link'
+              className='block py-2 px-4 text-white hover:bg-gray-700 rounded'
               to='/'
               onClick={() => setIsCollapsed(true)}
             >
               Home
             </Link>
           </li>
-          <li className='nav-item'>
+          <li>
             <Link
-              className='nav-link'
+              className='block py-2 px-4 text-white hover:bg-gray-700 rounded'
               to='/about'
               onClick={() => setIsCollapsed(true)}
             >
               About
             </Link>
           </li>
-          <li className='nav-item'>
+          <li>
             <Link
-              className='nav-link'
+              className='block py-2 px-4 text-white hover:bg-gray-700 rounded'
               to='/contact'
               onClick={() => setIsCollapsed(true)}
             >
